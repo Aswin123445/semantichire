@@ -23,7 +23,8 @@ class PreprocessingAnalyzeAPIView(APIView):
 
         response_data = PreprocessingAnalyzeResponseSchema.build(
             original_text=text,
-            cleaned_text=processed_data["original_text"],
+            cleaned_text=processed_data["cleaned_text"],
+            tokens=processed_data["tokens"],
         )
 
         return Response(response_data, status=status.HTTP_200_OK)
