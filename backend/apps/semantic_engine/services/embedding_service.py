@@ -5,5 +5,4 @@ class EmbeddingService:
 
     @staticmethod
     def generate_embedding(text: str):
-
         return EmbeddingApplicationPipeline.process(text)
